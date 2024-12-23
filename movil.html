@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+body{
+    justify-content: center;
+    display: flex;
+    padding-top: 80px;
+}    
+header{
+    position: fixed;
+    background-color: rgb(255, 232, 223);
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .4);
+    z-index: 2;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    top: -16px;
+}
+
+header li{
+    list-style: none;
+    padding: 15px 15px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+header li:hover{
+    border-bottom: 2px solid black;
+}
+
+#p-1{
+    position: relative;
+    width: auto;
+    max-width: 450px;
+    height: auto;
+    background-color: rgb(248, 214, 255);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#bars{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    z-index: 3;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 545px){
+    header ul{
+        display: none;
+    }
+
+    #bars{
+        display: block;
+    }
+
+    #dgear{
+        transform: translateX(30px);
+    }
+}
+
+#LMM{
+    top: 50px;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(255, 232, 223);
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    z-index: 1;
+    transform: translateX(-300px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .4);
+}
+
+ul{
+    list-style: none;
+}
+
+#LMM ul li{
+    padding: 10px 15px;
+    margin-bottom: 2px;
+    width: 96%;
+    border-bottom: 1px solid black;
+}
+
+#LMM ul{
+    top: 30px;
+    width: 100%;
+    left: -30px;
+    position: relative;
+}
+
+#gear{
+    z-index: 3;
+    cursor: pointer;
+    padding: 5px;
+    width: 17px;
+    height: 17px;
+}
+
+#dgear{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    z-index: 3;
+}
+
+#D-LMenu{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(255, 232, 223);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    left: -20px;
+    top: 25px;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-DL{
+    width: 90%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+#border-DL{
+    width: 70px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#circle-DL{
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 3px;
+}
+
+    </style>
+</head>
+<body id="body">
+    <header id="header">
+        <ul>
+            <a href="index.html"><li id="biografia">Biografía</li></a>
+            <a href="gustos.html"><li id="gustos">Gustos</li></a>
+            <a href="pasatiempos.html"><li id="pasatiempos">Pasatiempos</li></a>
+            <a href="deseos.html"><li id="deseos">Deseos</li></a>
+            <a href="aspiraciones.html"><li id="aspiraciones">Aspiraciones</li></a>
+        </ul>
+    </header>
+
+    <i class="fa-solid fa-bars" id="bars"></i>
+    <div id="dgear"><i class="fa-solid fa-gear" id="gear"></i>
+        <div id="D-LMenu">
+            <div id="content-DL">
+                <p id="PDL" style="width: 40px;">Light</p>
+                <div id="border-DL">
+                    <div id="circle-DL"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="left-menu-mobile" id="LMM">
+        
+        <ul>
+            <a href="index.html"><li>Biografía</li></a>
+            <a href="gustos.html"><li>Gustos</li></a>
+            <a href="pasatiempos.html"><li>Pasatiempos</li></a>
+            <a href="deseos.html"><li>Deseos</li></a>
+            <a href="aspiraciones.html"><li>Aspiraciones</li></a> 
+        </ul>
+
+    </div>
+
+    <div id="p-1"><p>Hola, les vengo a contar la historia de mi maravillosa novia. Espero y les guste mucho. <br><br>
+
+        Ella se llama Lesly Mariel Rosario (De Jimenez futuramente), vive en Santo Domingo, República Dominicana. Estudia en el
+        Instituto Politécnico Max Henríquez Ureña, en el módulo de Desarrolo y Administración de Aplicaciones Informáticas. <br><br>
+
+        Su mamá se llama Paola Rosario Sánchez, se hermana se llama Leila Charlotte Hernandez Rosario. Tiene un un padre y varios hermanos
+        más que no hacen falta mencionar debido a que no es muy cercana a ellos.
+    </p></div>
+</body>
+
+    <script>
+
+const bars = document.getElementById("bars");
+const ML = document.getElementById("LMM");
+const gear = document.getElementById("gear");
+const DarkLight = document.getElementById("D-LMenu");
+const BDL = document.getElementById("border-DL");
+const CCDL = document.getElementById("circle-DL");
+const PDL = document.getElementById("PDL");
+const header = document.getElementById("header");
+const body = document.getElementById("body");
+const li = document.querySelectorAll("li");
+const div = document.querySelectorAll("div");
+const texto = document.querySelectorAll("p");
+const p_1 = document.getElementById("p-1");
+let AML;
+let AG;
+let ADL;
+
+
+bars.addEventListener("click", function(){
+
+    if (!AML) {
+        ML.style.transform = "translateX(0px)";
+        ML.style.transition = "transform .3s";
+    }
+
+    else{
+        ML.style.transform = "translateX(-300px)";
+        ML.style.transition = "transform .3s";
+    }
+
+    AML = !AML;
+})
+
+gear.addEventListener("click", function(){
+    if (!AG) {
+        DarkLight.style.display = "flex";
+        gear.style.transform = "rotate(90deg)";
+        gear.style.transition = "transform .3s"
+    }
+
+    else{
+        gear.style.transform = "rotate(0deg)";
+        gear.style.transition = "transform .3s"
+        DarkLight.style.display = "none";
+    }
+
+    AG = !AG;
+})
+
+BDL.addEventListener("click", function(){
+
+    if (!ADL) {
+        CCDL.style.transform = "translateX(44px)";
+        CCDL.style.transition = "transform .3s";
+        CCDL.style.backgroundColor = "white";
+        PDL.textContent = "Dark";
+        PDL.style.color = "white";
+        BDL.style.borderColor = "white";
+        gear.style.color = "white";
+        header.style.backgroundColor = "rgb(31, 31, 31)";
+        header.style.transition = "background-color .3s";
+        DarkLight.style.backgroundColor = "rgb(31, 31, 31)";
+        header.style.transition = "background-color .3s";
+        body.style.backgroundColor = "rgb(41, 41, 41)";
+        body.style.transition = "background-color .3s";
+        bars.style.color = "white";
+        bars.style.transition = "background-color .3s";
+        li.forEach(li => {
+            li.style.color = "white";
+            li.style.borderBottomColor = "white";
+        });
+
+        texto.forEach(p => {
+            p.style.color = "white";
+        })
+
+        p_1.style.backgroundColor = "rgba(36, 36, 36)";
+        p_1.style.transition = "background-color .3s";
+        ML.style.backgroundColor = "rgba(31, 31, 31)";
+        ML.style.transition = "background-color .3s";
+    }
+
+    else{
+        CCDL.style.transform = "translateX(0px)";
+        CCDL.style.transition = "transform .3s";
+        PDL.textContent = "Light";
+        PDL.style.color = "black";
+        BDL.style.borderColor = "black";
+        CCDL.style.backgroundColor = "black";
+        gear.style.color = "black";
+        header.style.backgroundColor = "rgb(255, 232, 223)";
+        header.style.transition = "background-color .3s";
+        DarkLight.style.backgroundColor = "rgb(255, 232, 223)";
+        header.style.transition = "background-color .3s";
+        body.style.backgroundColor = "white";
+        body.style.transition = "background-color .3s";
+        bars.style.color = "black";
+        bars.style.transition = "background-color .3s";
+        li.forEach(li => {
+            li.style.color = "black";
+            li.style.borderBottomColor = "black";
+        });
+
+        texto.forEach(p => {
+            p.style.color = "black";
+        })
+
+        p_1.style.backgroundColor = "rgb(248, 214, 255)";
+        p_1.style.transition = "background-color .3s";
+        ML.style.backgroundColor = "rgb(255, 232, 223)";
+        ML.style.transition = "background-color .3s";
+    }
+
+    ADL = !ADL
+})
+
+    </script>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        #biografia{
+            border-bottom: 2px solid black;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <header id="header">
+        <ul>
+            <a href="index.html"><li id="biografia">Biografía</li></a>
+            <a href="gustos.html"><li id="gustos">Gustos</li></a>
+            <a href="pasatiempos.html"><li id="pasatiempos">Pasatiempos</li></a>
+            <a href="deseos.html"><li id="deseos">Deseos</li></a>
+            <a href="aspiraciones.html"><li id="aspiraciones">Aspiraciones</li></a>
+        </ul>
+    </header>
+
+    <i class="fa-solid fa-bars" id="bars"></i>
+    <div id="dgear"><i class="fa-solid fa-gear" id="gear"></i>
+        <div id="D-LMenu">
+            <div id="content-DL">
+                <p id="PDL" style="width: 40px;">Light</p>
+                <div id="border-DL">
+                    <div id="circle-DL"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="p-1">
+        <p>
+            Hola, hoy quiero compartirles una historia especial sobre una persona que significa muchísimo para mí: mi maravillosa
+            novia. Espero que disfruten conocerla tanto como yo disfruto tenerla en mi vida. <b id="acertijo">❤️</b><br><br>
+    
+            Su nombre es Lesly Mariel Rosario, De Jimenez futuramente jsjs, algo que me llena de emoción y felicidad. Ella vive en Santo Domingo, República Dominicana. Es una provincia tan especial como ella
+            y tan hermosa como ninguna. <br><br>
+
+            <img src="santo domingo.jpeg">
+    
+            Actualmente, está estudiando en el Instituto Politécnico Max Henríquez Ureña, de donde ella saldrá como la excelencia
+            académica y un gran desarrollo personal. Ella forma parte del mismo módulo que yo de Desarrollo y Administración de
+            Aplicaciones Informáticas, lo que me hace admirarla aún más, porque demuestra lo dedicada, talentosa y perseverante que 
+            es en esta módulo. Estoy seguro de que llegará muy lejos con sus habilidades y su pasión por aprender.<br><br>
+
+            <img src="politecnico.jpeg">
+    
+            Su mamá se llama Paola Rosario Sánchez, se hermana se llama Leila Charlotte Hernandez Rosario. Tiene un un padre y varios
+            hermanos más que no hacen falta mencionar debido a que no es muy cercana a ellos.<br><br>
+        </p>
+        <p>19/12/2024 2:49 PM</p>
+    </div>
+
+    <div id="carta">
+        <h2>Mensaje Ocurto</h2>
+        <p>Hola mi amor, veo que descubriste el primer acertijo, que buena eres bebé. Quiero decirte lo increíble que eres como persona
+           y como novia, no sabes lo afortunado que me siento al tener en mi vida a una persona tan... (las siguientes palabras están el
+           la siguiente sección, tienes que descubrir donde darle para que
+           te aparezca la continuación de este mensaje.)
+        </p>
+    </div>
+
+    <div class="left-menu-mobile" id="LMM">
+        
+        <ul>
+            <a href="index.html"><li>Biografía</li></a>
+            <a href="gustos.html"><li>Gustos</li></a>
+            <a href="pasatiempos.html"><li>Pasatiempos</li></a>
+            <a href="deseos.html"><li>Deseos</li></a>
+            <a href="aspiraciones.html"><li>Aspiraciones</li></a> 
+        </ul>
+
+    </div>
+</body>
+
+<script>
+const bars = document.getElementById("bars");
+const ML = document.getElementById("LMM");
+const gear = document.getElementById("gear");
+const DarkLight = document.getElementById("D-LMenu");
+const BDL = document.getElementById("border-DL");
+const CCDL = document.getElementById("circle-DL");
+const PDL = document.getElementById("PDL");
+const header = document.getElementById("header");
+const body = document.getElementById("body");
+const li = document.querySelectorAll("li");
+const div = document.querySelectorAll("div");
+const texto = document.querySelectorAll("p");
+const p_1 = document.getElementById("p-1");
+const title = document.querySelectorAll("h2");
+let AML;
+let AG;
+let ADL;
+
+bars.addEventListener("click", function(){
+
+    if (!AML) {
+        ML.style.transform = "translateX(0px)";
+        ML.style.transition = "transform .3s";
+    }
+
+    else{
+        ML.style.transform = "translateX(-300px)";
+        ML.style.transition = "transform .3s";
+    }
+
+    AML = !AML;
+})
+
+gear.addEventListener("click", function(){
+    if (!AG) {
+        DarkLight.style.display = "flex";
+        gear.style.transform = "rotate(90deg)";
+        gear.style.transition = "transform .3s"
+    }
+
+    else{
+        gear.style.transform = "rotate(0deg)";
+        gear.style.transition = "transform .3s"
+        DarkLight.style.display = "none";
+    }
+
+    AG = !AG;
+})
+
+BDL.addEventListener("click", function(){
+
+    if (!ADL) {
+        CCDL.style.transform = "translateX(44px)";
+        CCDL.style.transition = "transform .3s";
+        CCDL.style.backgroundColor = "white";
+        PDL.textContent = "Dark";
+        PDL.style.color = "white";
+        BDL.style.borderColor = "white";
+        gear.style.color = "white";
+        header.style.backgroundColor = "rgb(31, 31, 31)";
+        header.style.transition = "background-color .3s";
+        DarkLight.style.backgroundColor = "rgb(31, 31, 31)";
+        header.style.transition = "background-color .3s";
+        body.style.backgroundColor = "rgb(41, 41, 41)";
+        body.style.transition = "background-color .3s";
+        bars.style.color = "white";
+        bars.style.transition = "background-color .3s";
+        li.forEach(li => {
+            li.style.color = "white";
+            li.style.borderBottomColor = "white";
+        });
+
+        texto.forEach(p => {
+            p.style.color = "white";
+        })
+
+        p_1.style.backgroundColor = "rgba(36, 36, 36)";
+        p_1.style.transition = "background-color .3s";
+        ML.style.backgroundColor = "rgba(31, 31, 31)";
+        ML.style.transition = "background-color .3s";
+        title.forEach(h => {
+            h.style.color = "white";
+        });
+        c.style.backgroundColor = "rgb(19, 19, 19)";
+    }
+
+    else{
+        CCDL.style.transform = "translateX(0px)";
+        CCDL.style.transition = "transform .3s";
+        PDL.textContent = "Light";
+        PDL.style.color = "black";
+        BDL.style.borderColor = "black";
+        CCDL.style.backgroundColor = "black";
+        gear.style.color = "black";
+        header.style.backgroundColor = "rgb(255, 232, 223)";
+        header.style.transition = "background-color .3s";
+        DarkLight.style.backgroundColor = "rgb(255, 232, 223)";
+        header.style.transition = "background-color .3s";
+        body.style.backgroundColor = "white";
+        body.style.transition = "background-color .3s";
+        bars.style.color = "black";
+        bars.style.transition = "background-color .3s";
+        li.forEach(li => {
+            li.style.color = "black";
+            li.style.borderBottomColor = "black";
+        });
+
+        texto.forEach(p => {
+            p.style.color = "black";
+        })
+
+        p_1.style.backgroundColor = "rgb(248, 214, 255)";
+        p_1.style.transition = "background-color .3s";
+        ML.style.backgroundColor = "rgb(255, 232, 223)";
+        ML.style.transition = "background-color .3s";
+        title.forEach(h => {
+            h.style.color = "black";
+        });
+        c.style.backgroundColor = "white";
+    }
+
+    ADL = !ADL
+});
+
+document.addEventListener("click", function(e){
+    if (!gear.contains(e.target) && !DarkLight.contains(e.target)) {
+        gear.style.transform = "rotate(0deg)";
+        gear.style.transition = "transform .3s"
+        DarkLight.style.display = "none";
+
+        AG = !AG;
+    }
+});
+
+document.addEventListener("click", function(e){
+    if (!bars.contains(e.target) && !ML.contains(e.target)) {
+        ML.style.transform = "translateX(-300px)";
+        ML.style.transition = "transform .3s";
+        bars.className = "fa-solid fa-bars";
+
+        AML = !AML;
+    }
+});
+
+
+
+</script>
+<script src="acertijo.js"></script>
+</html>
